@@ -49,7 +49,7 @@ Template Name:project
 
         <div class="footer-container">
            
-          <p><small>© Untitled | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></small></p>
+        <p><small>&copy; Zavrsni rad 2021 - <?php echo date('Y'); ?> </small></p>
           <p class="footer-share-icons">
               <a href="https://www.twitter.com" class="fa-icon" title="">
                   <i class="fa fa-twitter" aria-hidden="true"></i>
@@ -138,6 +138,7 @@ Template Name:project
             <img src="http://proba.hr/wp-content/uploads/2021/10/slika.jpg" class="img-responsive" alt="">
             <p>Rade Jasenovčanin</p>
             </div>
+            <p><i class="fa fa-comments"></i><a href="<?php comments_link(); ?>"><?php comments_number( 'no responses', 'one response', '% responses' ); ?>.</a></p>
         </div>
 
       </div>

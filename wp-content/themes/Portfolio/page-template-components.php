@@ -23,6 +23,7 @@ Template Name:components
   <title><?php wp_title();?></title>  
 
   <link href="<?php bloginfo('template_url');?>/main.3da94fde.css" rel="stylesheet">
+  <link href="<?php bloginfo('template_url');?>/style.css" rel="stylesheet">
 
 <body>
 
@@ -49,7 +50,7 @@ Template Name:components
 
         <div class="footer-container">
            
-          <p><small>© Untitled | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></small></p>
+        <p><small>&copy; Zavrsni rad 2021 - <?php echo date('Y'); ?> </small></p>
           <p class="footer-share-icons">
               <a href="https://www.twitter.com" class="fa-icon" title="">
                   <i class="fa fa-twitter" aria-hidden="true"></i>
@@ -78,45 +79,17 @@ Template Name:components
   <!-- Add your site or app content here -->
   <div class="container">
     <div class="row">
+    <?php
+      while(have_posts()):
+      the_post();
+        ?>
       <div class="col-xs-12 col-md-6">
 
         <div class="template-example">
-          <h2 class="template-title-example">Text</h2>
-          <p>This is bold and this is semi bold and <b>this is extra bold</b>. This is italic and this is extra light and this is light
-          and this is regular. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in <a href="" title="">reprehenderit</a> in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <h2 class="template-title-example"><?php the_title();?></h2>
+          <p><?php the_excerpt();?></p>
         </div>
-
-        
-
-        <div class="template-example">
-          <h2 class="template-title-example">List</h2>
-          <div class="row">
-            <div class="col-md-6">
-              <h3 class="template-title-example">Ordered</h3>
-              <ul>
-                <li>Consectetur adipiscing elit</li>
-                <li>Integer molestie lorem at massa</li>
-                <li>Facilisis in pretium nisl aliquet</li>
-                <li>Nulla volutpat aliquam velit</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <h3 class="template-title-example">Number</h3>
-              <ol>
-                <li>Consectetur adipiscing elit</li>
-                <li>Integer molestie lorem at massa</li>
-                <li>Facilisis in pretium nisl aliquet</li>
-                <li>Nulla volutpat aliquam velit</li>
-              </ol>
-            </div>
-          </div>
-        </div>
+        <?php endwhile; ?>
 
         
       </div>
@@ -126,7 +99,7 @@ Template Name:components
       <div class="template-example">
           <h2 class="template-title-example">Kontakt Forma</h2>
 
-            <div class="form-group">
+            <div class="form-group" >
               <label for="exampleInputEmail1">Email address</label>
               <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
             </div>

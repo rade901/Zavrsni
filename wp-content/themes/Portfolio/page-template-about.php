@@ -47,7 +47,7 @@ Template Name:about
 
         <div class="footer-container">
            
-          <p><small>© Untitled | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></small></p>
+        <p><small>&copy; Zavrsni rad 2021 - <?php echo date('Y'); ?> </small></p>
           <p class="footer-share-icons">
               <a href="https://www.twitter.com" class="fa-icon" title="">
                   <i class="fa fa-twitter" aria-hidden="true"></i>
